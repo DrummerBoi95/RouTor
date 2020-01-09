@@ -30,6 +30,7 @@ Partial Class Form1
 		Me.TextBox2 = New System.Windows.Forms.TextBox()
 		Me.Label1 = New System.Windows.Forms.Label()
 		Me.Label2 = New System.Windows.Forms.Label()
+		Me.goButton = New System.Windows.Forms.Button()
 		Me.SuspendLayout()
 		'
 		'WebBrowser1
@@ -96,11 +97,21 @@ Partial Class Form1
 		Me.Label2.TabIndex = 7
 		Me.Label2.Text = "Password"
 		'
+		'goButton
+		'
+		Me.goButton.Location = New System.Drawing.Point(56, 137)
+		Me.goButton.Name = "goButton"
+		Me.goButton.Size = New System.Drawing.Size(75, 23)
+		Me.goButton.TabIndex = 8
+		Me.goButton.Text = "Go"
+		Me.goButton.UseVisualStyleBackColor = True
+		'
 		'Form1
 		'
 		Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
 		Me.ClientSize = New System.Drawing.Size(800, 450)
+		Me.Controls.Add(Me.goButton)
 		Me.Controls.Add(Me.Label2)
 		Me.Controls.Add(Me.Label1)
 		Me.Controls.Add(Me.TextBox2)
@@ -124,4 +135,5 @@ Partial Class Form1
 	Friend WithEvents TextBox2 As TextBox
 	Friend WithEvents Label1 As Label
 	Friend WithEvents Label2 As Label
+	Friend WithEvents goButton As Button
 End Class
