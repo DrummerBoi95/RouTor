@@ -14,16 +14,23 @@
         <TextView
             android:id="@+id/text"
             android:paddingTop="50.0dp"
-            android:paddingLeft="35.0dp"
-            android:layout_width="250.0dp"
-            android:layout_height="250.0dp"
+            android:paddingLeft="50.0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="@string/hello_world" />
-        <Button
-            android:text="Button"
-             android:paddingTop="450.0dp"
-            android:paddingLeft="375.0dp"
-            android:layout_width="50.0dp"
-            android:layout_height="40.0dp"
-            android:id="@+id/button1" />
+        <RelativeLayout
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/relativeLayout1">
+            <Button
+                android:text="Button"
+                android:paddingTop="100.0dp"
+                android:paddingLeft="100.0dp"
+                android:layout_width="50.0dp"
+                android:layout_height="50.0dp"
+                android:id="@+id/button1" />
+        </RelativeLayout>
     </FrameLayout>
 </android.support.wear.widget.BoxInsetLayout>
