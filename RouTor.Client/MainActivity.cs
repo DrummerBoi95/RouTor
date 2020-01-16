@@ -27,26 +27,27 @@ namespace RouTor.Client
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.RoundMain);
 
-            var v = FindViewById<WatchViewStub>(Resource.Id.watch_view_stub);
-            v.LayoutInflated += delegate
+            var v = FindViewById<LinearLayout>(Resource.Id.watch_view_stub);
+            Button button = FindViewById<Button>(Resource.Id.myButton);
+
+            button.Click += delegate
             {
-                
-                Button button = FindViewById<Button>(Resource.Id.myButton);
+                //Perform router login
+                SilentWebBrowser oBrowser = new SilentWebBrowser();
 
-                button.Click += delegate
-                {
-                    //Perform router login
-                    SilentWebBrowser oBrowser = new SilentWebBrowser();
+                oBrowser.UserName = Resources.GetString(Resource.String.Username);
+                oBrowser.Password = Resources.GetString(Resource.String.Password);
+                oBrowser.LANIP = Resources.GetString(Resource.String.LANIP);
 
-                    oBrowser.UserName = Resources.GetString(Resource.String.Username);
-                    oBrowser.Password = Resources.GetString(Resource.String.Password);
-                    oBrowser.LANIP = Resources.GetString(Resource.String.LANIP);
+                oBrowser.NavigateLogin("http://159.253.72.79/login/login.html");
 
-                    oBrowser.NavigateLogin("http://159.253.72.79/login/login.html");
-
-                    oBrowser.PerformLogin();
-                };
+                oBrowser.PerformLogin();
             };
+            // v.LayoutInflated += delegate
+            //{
+                
+               
+            //};
         }
     }
 }
